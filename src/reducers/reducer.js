@@ -1,6 +1,6 @@
 import update from 'immutability-helper';
-import {FILTER_PRODUCTS} from "./actions";
-import products from './data/products';
+import {FILTER_PRODUCTS} from "../actionTypes/actions";
+import products from '../data/products';
 
 // Define initial state object
 // Make sure the state object contains the `products` array imported in this file
@@ -8,7 +8,6 @@ import products from './data/products';
 const initialState = {
   products: products,
   filter: "all",
-
 }
 
 // Finish writing the reducer for the `FILTER_PRODUCTS` action
@@ -16,7 +15,7 @@ const initialState = {
 // Give the `state` parameter a default value of `initialState`
 const reducer = function(state = initialState, action) {
 
-  if (ActionTypes === FILTER_PRODUCTS){
+  if (action.type === FILTER_PRODUCTS){
     return update(state, {filter: {$set: action.payload}})
   } else {
     return state;

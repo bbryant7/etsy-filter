@@ -3,9 +3,9 @@ import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 
-import '.s/styles/index.css';
+import './styles/index.css';
 import registerServiceWorker from './registerServiceWorker';
-import productApp from './reducers'
+import productApp from './reducers/reducer.js'
 import App from './components/App'
 
 const store = createStore(
